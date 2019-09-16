@@ -10,7 +10,7 @@ class EmailAddressParser
     @emails = emails 
   end 
 
-      def parse
+  def parse
     array = @emails.split(", ")
     newArray = []
     array.each{|string|
