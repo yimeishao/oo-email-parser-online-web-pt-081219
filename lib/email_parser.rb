@@ -8,9 +8,15 @@ class EmailAddressParser
   
   def initialize(emails)
     @emails = emails 
-    
   end 
-  
-  def parse 
-    
+
+      def parse
+    array = @emails.split(", ")
+    newArray = []
+    array.each{|string|
+      string = string.split(" ")
+      newArray << string
+    }
+    newArray.flatten.uniq
+  end
 end
